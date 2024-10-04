@@ -11,6 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #1C1C1C;
 }
 
 li {
@@ -41,5 +42,44 @@ button:hover {
 }
 
 input, textarea, select {
-    touch-action: manipulation; /* Empêche le zoom avec le double-tap sur les éléments de formulaire */
+    touch-action: manipulation;
+}
+
+header nav .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    padding: 1%;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #2B2B2B;
+}
+
+header nav .nav-list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #777777;
+}
+
+header nav .nav-list li.active {
+    background-color: #1C1C1C;
+    color: #fff;
+    padding: 1.5%;
+    border-radius: 10px;
+}
+
+header nav .nav-list li p {
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
 }
