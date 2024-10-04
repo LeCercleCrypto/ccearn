@@ -7,3 +7,7 @@ tapButton.addEventListener('click', () => {
     score++;
     scoreDisplay.textContent = `Points: ${score}`;
 });
+
+document.addEventListener('dblclick', function (event) {
+    event.preventDefault(); // Empêche l'action par défaut du double-clic
+});
