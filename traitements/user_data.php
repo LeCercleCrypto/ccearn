@@ -1,25 +1,18 @@
 <?PHP 
 
-session_start();
+include 'db_connect.php';
 
-// LOCAL
+if (isset($_GET['checkUserToken'])){
+    $name = 'admin';
+    $req = mysqli_query($conn, "SELECT * FROM users_table_tokens WHERE user_name = '$name'");
 
-// $db_server = "localhost";
-// $db_user = "root";
-// $db_pass = "";
-// $db_name = "airtech";
-
-// ONLINE
-
-$db_server = "ks65fl.myd.infomaniak.com";
-$db_user = "ks65fl_quent";
-$db_pass = "hzTwH-8PnQ0";
-$db_name = "ks65fl_skydev";
-
-
-$conn = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
-
-if ($conn) {
-    echo 'Connexion validée';
+    if ($req){
+        if (mysqli_num_rows($req) > 0){
+            if ($row = mysqli_fetch_assoc($req)){
+                echo $row['user_name'];
+                echo $row['counter_coins'];
+            }
+        }
+    }
 }
 ?>

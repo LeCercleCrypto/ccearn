@@ -25,5 +25,12 @@ function redirect(opt){
 }
 
 function CheckClick(){
-    document.location.href = 'traitements/user_data.php';
+    const url = 'traitements/user_data.php?checkUserToken=true';
+
+    fetch (url)
+    .then(rep => rep.text())
+    .then(data => {
+        console.log(data)
+    })
+    .catch(err => console.error(err))
 }
