@@ -25,5 +25,5 @@ function redirect(opt){
 }
 
 function CheckClick(){
-    document.location.href = '../traitements/user_data.php';
+    document.location.href = 'traitements/user_data.php';
 }
