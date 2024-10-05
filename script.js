@@ -43,3 +43,12 @@ function CheckClick(){
     mainValueWalletInput.value = newValue.toFixed(2);
     mainValueWallet.textContent = mainValueWalletInput.value;
 }
+
+function changeCurrency(){
+    let menuChangeCurrency = document.querySelector('.menu-change-currency');
+    if (menuChangeCurrency.style.display === 'block') {
+        menuChangeCurrency.style.display = 'none';
+    } else {
+        menuChangeCurrency.style.display = 'block';
+    }
+}

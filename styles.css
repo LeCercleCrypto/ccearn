@@ -102,6 +102,10 @@ a {
     display: block;
 }
 
+.main-show-wallet {
+    position: relative;
+}
+
 .main-show-wallet .btc-wrapper .image-currency .image-wrapper.img-disabled {
     display: none;
 }
@@ -118,9 +122,46 @@ a {
 
 .main-show-wallet .btc-wrapper .image-currency {
     width: 15%;
-    border-radius: 10px;
-    overflow: hidden;
+    position: relative;
 }
+
+.main-show-wallet .btc-wrapper .image-currency .menu-change-currency {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #777777;
+    width: 250%;
+    border-radius: 5px;
+    background-color: #1C1C1C;
+    display: none;
+}
+
+.main-show-wallet .btc-wrapper .image-currency .menu-change-currency .currency {
+    padding: 5%;
+    border-bottom: 1px solid #777777;
+}
+
+.main-show-wallet .btc-wrapper .image-currency .menu-change-currency .currency.active {
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+.main-show-wallet .btc-wrapper .image-currency .menu-change-currency .currency.active p {
+    color: #fff;
+}
+
+.main-show-wallet .btc-wrapper .image-currency .menu-change-currency .currency p {
+    font-size: 11px;
+}
+
+.main-show-wallet .btc-wrapper .image-currency .menu-change-currency .currency:last-child {
+    border: none;
+}
+
+.main-show-wallet .btc-wrapper .image-currency .image-wrapper  {
+    overflow: hidden;
+    border-radius: 10px;
+ }
 
 .main-show-wallet .btc-wrapper .image-currency .image-wrapper img {
     width: 100%;

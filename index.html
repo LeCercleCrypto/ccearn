@@ -46,15 +46,26 @@
                         <input type="hidden" name="mainValueWalletInput" id="mainValueWalletInput">
                     </div>
                 </div>
-                <div class="image-currency">
-                    <div class="btc-image image-wrapper">
+                <div class="image-currency" onclick="changeCurrency()">
+                    <div class="btc-image image-wrapper img-disabled">
                         <img src="imgs/bitcoin-square.png" alt="">
                     </div>
-                    <div class="eur-image image-wrapper img-disabled">
+                    <div class="eur-image image-wrapper ">
                         <img src="imgs/euro-square.png" alt="">
                     </div>
                     <div class="usd-image image-wrapper img-disabled">
                         <img src="imgs/dollar-square.png" alt="">
+                    </div>
+                    <div class="menu-change-currency">
+                        <div class="currency active">
+                            <p>EUR - Euros</p>
+                        </div>
+                        <div class="currency">
+                            <p>USD - Dollars</p>
+                        </div>
+                        <div class="currency">
+                            <p>BTC - Bitcoin</p>
+                        </div>
                     </div>
                 </div>
             </div>
