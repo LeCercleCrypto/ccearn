@@ -51,4 +51,36 @@ function changeCurrency(){
     } else {
         menuChangeCurrency.style.display = 'block';
     }
+
+    
+}
+
+function newCurrency(selectedCurrency, currencyType) {
+    // Récupérer tous les éléments de la devise
+    const currencies = document.querySelectorAll('.currency');
+
+    // Retirer la classe 'active' de tous les éléments
+    currencies.forEach(currency => {
+        currency.classList.remove('active');
+    });
+
+    // Ajouter la classe 'active' à l'élément sélectionné
+    selectedCurrency.classList.add('active');
+
+    // Mettre à jour l'image en fonction de la devise sélectionnée
+    const images = {
+        'EUR': document.getElementById('eurImage'),
+        'USD': document.getElementById('usdImage'),
+        'BTC': document.getElementById('btcImage')
+    };
+
+    // Cacher toutes les images
+    for (const key in images) {
+        images[key].parentElement.classList.add('img-disabled'); // Ajouter une classe pour cacher l'image
+    }
+
+    // Afficher l'image de la devise active
+    if (images[currencyType]) {
+        images[currencyType].parentElement.classList.remove('img-disabled'); // Retirer la classe pour afficher l'image
+    }
 }

@@ -47,23 +47,23 @@
                     </div>
                 </div>
                 <div class="image-currency" onclick="changeCurrency()">
-                    <div class="btc-image image-wrapper img-disabled">
-                        <img src="imgs/bitcoin-square.png" alt="">
+                    <div class="btc-image image-wrapper img-disabled" >
+                        <img src="imgs/bitcoin-square.png" alt="" id="btcImage">
                     </div>
-                    <div class="eur-image image-wrapper ">
-                        <img src="imgs/euro-square.png" alt="">
+                    <div class="eur-image image-wrapper " >
+                        <img src="imgs/euro-square.png" alt="" id="eurImage">
                     </div>
-                    <div class="usd-image image-wrapper img-disabled">
-                        <img src="imgs/dollar-square.png" alt="">
+                    <div class="usd-image image-wrapper img-disabled" >
+                        <img src="imgs/dollar-square.png" alt="" id="usdImage"> 
                     </div>
                     <div class="menu-change-currency">
-                        <div class="currency active">
+                        <div class="currency active" onclick="newCurrency(this, 'EUR')">
                             <p>EUR - Euros</p>
                         </div>
-                        <div class="currency">
+                        <div class="currency" onclick="newCurrency(this, 'USD')">
                             <p>USD - Dollars</p>
                         </div>
-                        <div class="currency">
+                        <div class="currency" onclick="newCurrency(this, 'BTC')">
                             <p>BTC - Bitcoin</p>
                         </div>
                     </div>
@@ -103,9 +103,9 @@
             </div>
         </section>
 
-        <section class="main-evolutive-line">
+        <!-- <section class="main-evolutive-line">
             <div class="evolutive-live"></div>
-        </section>
+        </section> -->
 
         <section class="main-tap-activity" onclick="CheckClick()">
             <div class="tap-image">
