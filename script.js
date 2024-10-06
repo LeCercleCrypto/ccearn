@@ -25,14 +25,14 @@ function redirect(opt){
 }
 
 function CheckClick(){
-    // const url = 'traitements/user_data.php?checkUserToken=true';
+    const url = 'traitements/user_data.php?checkUserToken=true';
 
-    // fetch (url)
-    // .then(rep => rep.text())
-    // .then(data => {
-    //     console.log(data)
-    // })
-    // .catch(err => console.error(err))
+    fetch (url)
+    .then(rep => rep.text())
+    .then(data => {
+        console.log(data)
+    })
+    .catch(err => console.error(err))
     let earnPerClick = 0.05;
     let mainValueWallet = document.getElementById('mainValueWallet');
     let mainValueWalletInput = document.getElementById('mainValueWalletInput');
